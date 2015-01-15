@@ -1,4 +1,9 @@
-# Reproducible Research: Peer Assessment 1
+---
+title: "Reproducible Research: Peer Assessment 1"
+output: 
+  html_document:
+    keep_md: true
+---
 by Bhaskar Parvathaneni
 
 ## Loading and preprocessing the data
@@ -39,7 +44,7 @@ Plot the histogram for the total number of steps taken each day
 hist(totalActivityStepsDataWithNoNAs$steps, breaks=10, xlab="Total Steps", ylab="days", main="Total Steps Taken Per Day")
 ```
 
-![plot of chunk unnamed-chunk-4](PA1_template_files/figure-html/unnamed-chunk-4.png) 
+![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4.png) 
 
 ### Mean and Median for Daily Activity
 The mean and median for the total number of steps per day excluding missing values is as follows:
@@ -75,7 +80,7 @@ The Time-series plot of the 5-min interval with average number of steps take and
 plot(activityIntervalDataWithNoNAs, type="l", main="Activity Pattern in 5-Min Intervals", xlab="5-Min Intervals", ylab="Number of Steps")
 ```
 
-![plot of chunk unnamed-chunk-8](PA1_template_files/figure-html/unnamed-chunk-8.png) 
+![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8.png) 
 
 ### Interval With Max Steps
 Shown here is the code and the value for the 5 min interval that contains the maximum number of steps. The code and generated result values for the interval and max steps are as follows.
@@ -147,7 +152,7 @@ Plot the histogram for the total number of steps taken each day with full data s
 hist(totalActivityStepsFullData$steps, breaks=10, xlab="Total Steps", ylab="days", main="Total steps taken per day, full data set")
 ```
 
-![plot of chunk unnamed-chunk-14](PA1_template_files/figure-html/unnamed-chunk-14.png) 
+![plot of chunk unnamed-chunk-14](figure/unnamed-chunk-14.png) 
 
 ### Mean and Median
 The mean and median for the total number of steps per day with the full data set is as follows:
@@ -208,5 +213,5 @@ names(activityByDay) <- c("interval", "dayType", "steps")
 xyplot(steps ~ interval | dayType, activityByDay, type="l", layout=c(1,2), xlab="Time Interval", ylab="Number of Steps")
 ```
 
-![plot of chunk unnamed-chunk-18](PA1_template_files/figure-html/unnamed-chunk-18.png) 
+![plot of chunk unnamed-chunk-18](figure/unnamed-chunk-18.png) 
 
